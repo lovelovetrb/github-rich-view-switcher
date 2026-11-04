@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Rich View Switcher",
+  "version": "0.1.0",
+  "description": "PR や commit の差分で、1 ファイルを rich / source 表示に切り替えると、ページ内の他のファイルもすべて同じ表示に揃えます。",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["src/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
